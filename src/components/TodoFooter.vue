@@ -1,5 +1,5 @@
 <template>
-  <footer class="todoapp__footer">
+  <footer class="todoapp__footer" v-if="items.remaining > 0">
     <span class="todo-count"> 
         {{ items.remaining }} items left 
     </span>
