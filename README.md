@@ -1,6 +1,6 @@
 # TodoApp
 
-### Lint with [DEMO](https://ihor-prodan.github.io/Todo-App-Vue.js/)
+### [DEMO](https://ihor-prodan.github.io/Todo-App-Vue.js/)
 
 ## About the Project
 
