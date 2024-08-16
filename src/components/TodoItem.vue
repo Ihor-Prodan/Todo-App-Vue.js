@@ -1,5 +1,5 @@
 <template>
-  <div data-cy="Todo" :class="`todo ${completed ? 'completed' : ''}`">
+  <div :class="`todo ${completed ? 'completed' : ''}`">
     <label class="todo__status-label">
       <input
         type="checkbox"
@@ -26,12 +26,14 @@
     </form>
 
     <template v-else>
-      <span data-cy="TodoTitle" className="todo__title" @dblclick="inputState = true">
+      <span class="todo__title" 
+        @dblclick="inputState = true"
+      >
         {{ title }}
       </span>
       <button
         type="button"
-        className="todo__remove"
+        class="todo__remove"
         v-on:click="todo.removeTodo(id)"
       >
         ×
@@ -43,12 +45,9 @@
 <script setup lang="ts">
 import { useTodoStore } from '@/stores/todosStore';
 import { nextTick, ref, watch } from 'vue';
+import type { Todo } from './types/TodoType';
 
-const props = defineProps<{
-  title: string
-  completed: boolean
-  id: number
-}>();
+const props = defineProps<Todo>();
 
 const todo = useTodoStore();
 const inputState = ref(false);

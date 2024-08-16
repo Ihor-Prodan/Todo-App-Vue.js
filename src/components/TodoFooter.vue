@@ -1,8 +1,10 @@
 <template>
   <footer class="todoapp__footer">
-    <span class="todo-count"> {{ items.remaining }} items left </span>
+    <span class="todo-count"> 
+        {{ items.remaining }} items left 
+    </span>
 
-    <nav className="filter">
+    <nav class="filter">
       <a href="#/" 
         class="filter__link active" 
         :class="{ selected: items.filter === Status.All }"
@@ -45,6 +47,5 @@ const items = useTodoStore();
 function clearCompleted() {
   items.todos = items.todos.filter(todo => !todo.completed);
 }
-
 </script>
 

@@ -5,7 +5,7 @@
       class="todoapp__toggle-all" :class="{active: todo.remaining === 0}"
       @click="todo.toggleAllTodo"
     />
-    <form @submit.prevent="addTodo()">
+    <form @submit.prevent="addTodo">
       <input
         type="text"
         class="todoapp__new-todo"
@@ -38,5 +38,4 @@ function addTodo() {
     newTodo.value.title = '';
   }
 }
-
 </script>

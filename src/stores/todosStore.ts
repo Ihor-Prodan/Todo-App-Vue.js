@@ -8,27 +8,26 @@ export enum Status {
   Completed = 'completed',
 }
 
-
 export const useTodoStore = defineStore('todo', () => {
-  const todos = ref<Todo[]>([])
+  const todos = ref<Todo[]>([]);
   const filter = ref(Status.All);
 
   const addTodo = (newTodo: Todo) => {
     todos.value.push(newTodo)
-  }
+  };
 
   const updateTodo = (newTodo: Todo) => {
     todos.value = todos.value.map((todo) =>
       todo.id === newTodo.id ? { ...todo, title: newTodo.title } : todo
     )
-  }
+  };
 
   function toggleTodo(id: number) {
     const todo = todos.value.find((todo) => todo.id === id)
     if (todo) {
       todo.completed = !todo.completed
     }
-  }
+  };
 
   function toggleAllTodo() {
     const allCompleted = todos.value.every((todo) => todo.completed)
@@ -36,11 +35,11 @@ export const useTodoStore = defineStore('todo', () => {
     todos.value.forEach((todo) => {
       todo.completed = !allCompleted
     })
-  }
+  };
 
   const removeTodo = (id: number) => {
     todos.value = todos.value.filter((todo) => todo.id !== id)
-  }
+  };
 
   const setFilter = (newFilter: Status) => {
     filter.value = newFilter;
@@ -57,7 +56,7 @@ export const useTodoStore = defineStore('todo', () => {
     }
   });
 
-  const remaining = computed(() => todos.value.filter((todo) => !todo.completed).length)
+  const remaining = computed(() => todos.value.filter((todo) => !todo.completed).length);
 
   return {
     todos, 
