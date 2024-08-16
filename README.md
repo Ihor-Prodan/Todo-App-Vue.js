@@ -1,39 +1,8 @@
-# My-project
+# TodoApp
 
-This template should help get you started developing with Vue 3 in Vite.
+### Lint with [DEMO](https://ihor-prodan.github.io/Todo-App-Vue.js/)
 
-## Recommended IDE Setup
+## About the Project
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This is a simple task management application built with Vue 3 and Pinia. TodoApp allows users to create, edit, delete, and filter tasks, helping to organize work efficiently. The application saves the state of tasks in `localStorage`, ensuring that data persists between user sessions. It is built using modern technologies, providing high performance and ease of development and maintenance.
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
